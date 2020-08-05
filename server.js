@@ -17,3 +17,9 @@ app.use(morgan("dev"));
 // 라우터 배치
 app.use("/api/v1/book_rental/user", user);
 app.use("/api/v1/book_rental/books", book_rental);
+
+const PORT = process.env.PORT || 5700;
+
+app.listen(PORT, () => {
+  console.log(`Server running in port 5700`);
+});
