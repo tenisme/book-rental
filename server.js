@@ -6,9 +6,7 @@ const morgan = require("morgan");
 
 // 라우터 require
 const user = require("./routes/user.js");
-
-// 미들웨어 require
-const auth = require("./middleware/auth.js");
+const book_rental = require(`./routes/book_rental.js`);
 
 const app = express();
 app.use(express.json());
@@ -18,6 +16,7 @@ app.use(morgan("dev"));
 
 // 라우터 배치
 app.use("/api/v1/book_rental/user", user);
+app.use("/api/v1/book_rental/books", book_rental);
 
 const PORT = process.env.PORT || 5700;
 
