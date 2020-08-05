@@ -18,7 +18,6 @@ app.use(morgan("dev"));
 app.use("/api/v1/book_rental/user", user);
 app.use("/api/v1/book_rental/books", book_rental);
 
-// 포트 연결
 const PORT = process.env.PORT || 5700;
 
 app.listen(PORT, () => {
